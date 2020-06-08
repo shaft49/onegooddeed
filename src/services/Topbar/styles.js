@@ -12,6 +12,7 @@ const styles = theme => ({
     textTwo: {
         color: '#d41717',
     },
+    
 });
 
 export default styles;

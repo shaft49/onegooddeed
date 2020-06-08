@@ -8,9 +8,7 @@ import logo from '../../assets/images/logo.png';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
-const style = {
-    background : '#2E3B55'
-};
+
 const Topbar = (props) => {
     const classes = useStyles();
 

@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexFlow: 'column',
         height: '100vh',
+        backgroundColor: '#141417',
+        color: '#F2F1E7'
     },
     container: {
         flex: '1 1 auto'
