@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexFlow: 'column',
-        height: '100vh',
+        height: 'auto',
         backgroundColor: '#141417',
         color: '#F2F1E7'
     },
