@@ -8,13 +8,19 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  addButton: {
+    color: '#334747',
+    backgroundColor: '#dde0d3',
+    border: '1px solid orange',
+    marginTop: 10,
+  }
 }));
 
-export default function ContainedButtons({handleClick}) {
+export default function ContainedButtons(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Button variant="contained" onClick={() => handleClick()}>Add Your Own</Button>
+      <Button className = {classes.addButton} variant="contained" onClick={() => props.handleClick()}>Add Your Own</Button>
     </div>
   );
 }

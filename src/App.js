@@ -6,6 +6,7 @@ import LandingPage from './services/LandingPage'
 import Template from './templates/AppTemplate';
 import Typography from '@material-ui/core/Typography';
 import AddButton from './services/AddButton'
+import Grid from './services/Grid'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +14,7 @@ class App extends Component {
             deeds: [
                 {message: "This is the first message", name: "shaafi", location: "Dhaka"},
                 {message: "This is the second message", name: "tamanna", location: "Chittagong"},
-                {message: "No idea what is this", name: "no name", location: "Rajshahi"}
+                {message: "No idea what is this. I'm trying to build a site with react. Lets's see how far can I go. And it'll be awesome. You wanto to know. I don't know how to write . Just checking whether it breaks", name: "no name", location: "Rajshahi"}
             ]
         }
     }
@@ -30,11 +31,13 @@ class App extends Component {
                         What is the one good deed that you've done today?
                         <AddButton handleClick = {this.handleClick}/>
                     </Typography>
-                    {this.state.deeds.map((deed, index) => (
-                        <Card message = {deed.message} name = {deed.name} location = {deed.location}></Card>
-                    ))}
-                    {/* <Card message = {this.state.deeds[0].message} name = {this.state.deeds[0].name} location={this.state.deeds[0].location}/> */}
-                    {/* <Card message = {this.state.deeds[1].message} name = {this.state.deeds[1].name} location={this.state.deeds[1].location}/> */}
+                    {/* <Grid/> */}
+                    <div>
+                        {this.state.deeds.map((deed, index) => (
+                            <Card message = {deed.message} name = {deed.name} location = {deed.location}></Card>
+                        ))}
+                    </div>
+                   
                 </Template>
             </div>
             

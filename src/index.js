@@ -7,6 +7,7 @@ import history from './history';
 import * as serviceWorker from './serviceWorker';
 import { Button } from '@material-ui/core';
 import App from './App'
+import Hook from './Hook'
 const Root = () => (
   <Router history={history}>
       <Switch>
@@ -20,7 +21,8 @@ const Root = () => (
   </Router>
 );
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Hook/>, document.getElementById('root'));
+// ReactDOM.render(<App/>, document.getElementById('root'));
 // ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
