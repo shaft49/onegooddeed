@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import './App.css'
 import Card from './services/Card'
-import { Button } from '@material-ui/core';
-import LandingPage from './services/LandingPage'
 import Template from './templates/AppTemplate';
 import Typography from '@material-ui/core/Typography';
-import AddButton from './services/AddButton'
-import Grid from './services/Grid'
+import Dialog from'./services/Dialog'
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -23,19 +21,29 @@ class App extends Component {
         this.setState({deeds: [...this.state.deeds, newDeeds]});
         console.log('click happened');
     }
+
+    addNewDeed = (props) => {
+        const {message, name, location} = props;
+        const newDeeds = {message: message, name: name, location: location};
+        this.setState({deeds: [...this.state.deeds, newDeeds]});
+    }
+
     render() {
         return(
             <div className = "App">
                 <Template>
                     <Typography variant="h4" align="center">
                         What is the one good deed that you've done today?
-                        <AddButton handleClick = {this.handleClick}/>
+
+                        <Dialog addNewDeed = {this.addNewDeed}/>
+                        {/* <AddButton handleClick = {this.handleClick}/> */}
                     </Typography>
                     {/* <Grid/> */}
-                    <div>
-                        {this.state.deeds.map((deed, index) => (
-                            <Card message = {deed.message} name = {deed.name} location = {deed.location}></Card>
-                        ))}
+                    <div>{
+                        this.state.deeds.map((deed, index) => (
+                            <Card key = {index} message = {deed.message} name = {deed.name} location = {deed.location}></Card>
+                        ))
+                        }
                     </div>
                    
                 </Template>

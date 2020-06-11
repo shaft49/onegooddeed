@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Switch, Route} from 'react-router'
-import LandingPage from './services/LandingPage';
 import ErrorPage from './services/ErrorPage';
 import history from './history';
 import * as serviceWorker from './serviceWorker';
-import { Button } from '@material-ui/core';
+
 import App from './App'
-import Hook from './Hook'
 const Root = () => (
   <Router history={history}>
       <Switch>
-          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/" component={App} />
           <Route
               render={() => (
                   <ErrorPage title="404" description="Page not found" />
@@ -21,8 +19,8 @@ const Root = () => (
   </Router>
 );
 
-ReactDOM.render(<Hook/>, document.getElementById('root'));
-// ReactDOM.render(<App/>, document.getElementById('root'));
+// ReactDOM.render(<Hook/>, document.getElementById('root'));
+ReactDOM.render(<Root/>, document.getElementById('root'));
 // ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
