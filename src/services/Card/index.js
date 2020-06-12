@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     border: '3px solid #f44336',
     padding: '10px',
     backgroundColor: '#dde0d3',
-    minWidth: 450,
+    minWidth: 300,
     maxWidth: 700,
     minHeight: 200,
     marginTop: 20,

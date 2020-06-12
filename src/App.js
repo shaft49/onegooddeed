@@ -37,7 +37,7 @@ class App extends Component {
                     });
                 }
                 this.setState({deeds: data})
-                console.log(data);
+                // console.log(data);
             })
             .catch( error => {
                 console.log(error);
@@ -55,7 +55,7 @@ class App extends Component {
         this.setState({deeds: [...this.state.deeds, newDeeds]});
         axios.post('/deeds.json', newDeeds)
         .then(response => {
-            console.log(response)
+            // console.log(response)
         })
         .catch( error => {
             console.log(error);
